@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=ColeccionAmistades
+comment1.params=
+comment1.target=ColeccionAmistades()
+comment2.params=amistad
+comment2.target=boolean\ agregarAmistad(Amistad)
+comment3.params=usuario1\ usuario2
+comment3.target=boolean\ buscarAmistad(java.lang.String,\ java.lang.String)
+numComments=4

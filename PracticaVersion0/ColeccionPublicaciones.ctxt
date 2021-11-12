@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=ColeccionPublicaciones
+comment1.params=
+comment1.target=ColeccionPublicaciones()
+comment2.params=p
+comment2.target=boolean\ agregarPublicacion(Publicacion)
+comment3.params=usuario
+comment3.target=java.util.ArrayList\ getPublicacionesDeUnUsuario(java.lang.String)
+numComments=4
