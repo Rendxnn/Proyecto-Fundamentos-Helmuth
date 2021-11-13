@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Amistad
-comment0.text=\r\n\ En\ esta\ clase\ se\ mantienen\ los\ usua.\r\n\ \r\n\ @author\ Nombre\ del\ estudiante\r\n\ @version\ versi\u00F3n\ 0\r\n
+comment0.text=\n\ En\ esta\ clase\ se\ mantienen\ los\ usua.\n\ \n\ @author\ Nombre\ del\ estudiante\n\ @version\ versi\u00F3n\ 0\n
 comment1.params=usuario1\ usuario2
 comment1.target=Amistad(java.lang.String,\ java.lang.String)
 comment2.params=

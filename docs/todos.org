@@ -1,0 +1,15 @@
+* todos
+** añadir los datos a un archivo desde crear usuario
+referencia   https://www.codejava.net/java-se/file-io/how-to-read-and-write-text-file-in-java
+
+  
+* funciona ?
+** DONE crear usuario 
+** ingresar 
+*** DONE menu
+*** DONE 1 crear publicacion
+*** DONE añadir amistad
+*** 3 ver la publicacion de otro usuario(amigo)
+*** DONE 4 ver mis publiaciones
+** 3 ver la publicacion de otro usuario(amigo)
+   helmut hiso el codigo para poder hacer eso , mas facil , ya faltaria corregir y limpiar
