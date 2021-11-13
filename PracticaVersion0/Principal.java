@@ -27,7 +27,6 @@ public class Principal
     public static void menuPrincipal() {
         int opcion;
         do {
-            in = new Scanner(System.in);
             System.out.println("========================");
             System.out.println("1. Crear usuario");
             System.out.println("2. Ingresar al sistema");
@@ -54,7 +53,7 @@ public class Principal
             in = new Scanner(System.in);
             System.out.println("========================");
             System.out.println("Favor ingresar el nuevo usuario: (o fin para terminar)");
-            usuario = in.nextLine();
+            usuario = in.next();
             if (usuario.equals("fin")) return;
             if(coleccionUsuarios.buscarUsuario(usuario) != null) {
                 System.out.println("Ese usuario ya existe");
@@ -63,9 +62,9 @@ public class Principal
             }
         } while (!exito);
         System.out.println("Favor ingresar la clave: ");
-        clave = in.nextLine();
+        clave = in.next();
         System.out.println("Favor ingresar el nombre completo: ");
-        nombreCompleto = in.nextLine();
+        nombreCompleto = in.next();
         Usuario nuevoUsuario = new Usuario(usuario, clave, nombreCompleto);
         coleccionUsuarios.agregarUsuario(nuevoUsuario);
         System.out.println("Bienvenido(a) al sistema");
@@ -80,10 +79,10 @@ public class Principal
             in = new Scanner(System.in);
             System.out.println("========================");
             System.out.println("Favor ingresar su usuario: (fin para terminar)");
-            usuario = in.nextLine();
+            usuario = in.next();
             if(usuario.equals("fin")) return;
             System.out.println("Favor ingresar su clave: ");
-            clave = in.nextLine();
+            clave = in.next();
             Principal.usuarioActivo = coleccionUsuarios.buscarUsuarioClave(usuario, clave);
             if(usuario == null) {
                 System.out.println("Combinación usuario y clave inválida");
@@ -127,10 +126,10 @@ public class Principal
 
     public static void menuCrearPublicacion() {
         String texto;
-        in = new Scanner(System.in);
+        //in = new Scanner(System.in);
         System.out.println("========================");
         System.out.println("Favor ingresar el texto de su publicación: ");
-        texto = in.nextLine();
+        texto = in.next();
         Publicacion publicacion = 
             new Publicacion(Principal.usuarioActivo.getUsuario(), texto);
         Principal.coleccionPublicaciones.agregarPublicacion(publicacion);
@@ -145,7 +144,7 @@ public class Principal
             in = new Scanner(System.in);
             System.out.println("========================");
             System.out.println("Favor ingresar el(la) amigo(a): (fin para terminar)");
-            usuario = in.nextLine();
+            usuario = in.next();
             if(usuario.equals("fin")) return;
             amigo = coleccionUsuarios.buscarUsuario(usuario);
             if(amigo == null) {
@@ -168,7 +167,21 @@ public class Principal
     }
 
     public static void menuVerPublicacionesAmigo() {
-
+        String usuario;
+        System.out.println("========================");
+        System.out.println("Favor ingresar el(la) amigo(a): (fin para terminar)");
+        usuario = in.next();
+        if(Principal.coleccionAmistades.buscarAmistad(Principal.usuarioActivo.getUsuario(), usuario)) {
+            ArrayList<Publicacion> seleccionadas = Principal.coleccionPublicaciones.getPublicacionesDeUnUsuario(usuario);
+            if(seleccionadas.size()==0){
+                System.out.println(usuario+" no tiene publicaciones");
+            }
+            else{
+                for(Publicacion p: seleccionadas) {
+                    System.out.println(p.getTexto());
+                }
+            }
+        }
     }
 
     public static void menuVerPublicacionesPropias() {

@@ -55,7 +55,7 @@ public class Publicacion
      * Se retorna el texto de la publicación
      */
     public String getTexto() {
-        return texto;
+        return  this.texto;
     }
     
     
